@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant browser
+    participant server  
+
+    browser->>server: https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    activate server
+    Note right of browser: Payload is include within the Request 
+    server-->>browser: {"message":"note created"}
+    deactivate server
+    
